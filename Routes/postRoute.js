@@ -46,7 +46,7 @@ postRoute.get("/get", async (req, res) => {
     }
 })
 
-postRoute.get("/get:Id", async (req, res) => {
+postRoute.get("/getid/:Id", async (req, res) => {
     // const {title,categories,content} =  req.body ;
     console.log(req.body);
 
