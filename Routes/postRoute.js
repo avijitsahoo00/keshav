@@ -64,8 +64,8 @@ postRoute.post("/delete", async (req, res) => {
 
     try {
         const id = req.body.id;
-        const response = await blogSchema.deleteById(id);
-        res.send(response)
+        const response = await blogSchema.findByIdAndRemove(id);
+        res.send(response);
     } catch (error) {
         res.send(error)
     }
