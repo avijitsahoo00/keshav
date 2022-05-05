@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
     title: String,
+    categories:String,
     content: String,
     like: Number,
-    postDate: Date,
 })
 
 const blogModel = new mongoose.Model( "blog", blogSchema);
