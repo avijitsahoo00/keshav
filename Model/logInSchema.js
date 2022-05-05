@@ -7,6 +7,6 @@ const logInSchema = new mongoose.Schema({
     isVeryfied: Boolean,
 })
 
-const logInModel = new mongoose.Model("logInUser", logInSchema);
+const logInModel = new mongoose.model("logInUser", logInSchema);
 
 module.exports = logInModel;

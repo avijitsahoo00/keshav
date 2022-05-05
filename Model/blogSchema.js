@@ -7,6 +7,6 @@ const blogSchema = new mongoose.Schema({
     like: Number,
 })
 
-const blogModel = new mongoose.Model( "blog", blogSchema);
+const blogModel = new mongoose.model( "blog", blogSchema);
 
 module.exports = blogModel ;
