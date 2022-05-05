@@ -73,4 +73,19 @@ postRoute.post("/delete", async (req, res) => {
 })
 
 
+postRoute.post("/like/:id", async (req, res) => {
+    // const {title,categories,content} =  req.body ;
+    console.log(req.body);
+    const postData = req.body ;
+    const id = req.params.id
+    try {
+        const response1 = await blogSchema.findById(id);
+       const response = await response1.update(postData);
+        res.send(response)
+    } catch (error) {
+        res.send(error)
+    }
+});
+
+
 module.exports = postRoute
